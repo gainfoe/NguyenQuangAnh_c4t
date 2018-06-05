@@ -1,24 +1,24 @@
 from random import *
 
-lword = ["champion", "love", "heart", "hexagon", "cute"]
+list_word = ["champion", "love", "heart", "hexagon", "cute"]
 end = 5
 while end != 0:
     char = []
-    so_ngau_nhien = randint(0, len(lword) - 1)
-    word = lword[so_ngau_nhien]
-    lword.pop(so_ngau_nhien)
-    wlist = []
+    random_number = randint(0, len(list_word) - 1)
+    word = list_word[random_number]
+    list_word.pop(random_number)
+    char_list = []
     do_dai = len(word)
     end = end - 1
 
     for i in range(do_dai):
         a = word[i]
-        wlist.append(a)
-    for j in range(do_dai):
-        so_thu_tu = randint(0, len(wlist) - 1)
-        chu = wlist[so_thu_tu]
+        char_list.append(a)
+    for _ in range(do_dai):
+        thu_tu = randint(0, len(char_list) - 1)
+        chu = char_list[thu_tu]
         char.append(chu)
-        wlist.pop(so_thu_tu)
+        char_list.pop(thu_tu)
 
     print(*char, sep=" ")
 
@@ -43,7 +43,6 @@ while end != 0:
                 print("Loi cu phap")
     else:
         print("Ban da chien thang")
-
 
 
 
