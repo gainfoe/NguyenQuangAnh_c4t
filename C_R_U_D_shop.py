@@ -4,11 +4,12 @@ item = ["T-Shirt", "Sweater"]
 while True:
     action = input("Wecome to our shop. What do you want: (C, R, U, D) or Stop ? ")
     action_low = action.lower()
-    if len(item) != 1:
-        intro = intro_2
+    intro = intro_2
     if action_low == "c":
         new_item = input("Enter new item: ")
         item.append(new_item)
+        if len(item) != 1:
+            intro = intro_2
         print(intro, end="")
         print(*item, sep=", ")
     elif action_low == "r":
